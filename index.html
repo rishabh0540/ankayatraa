@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Open Graph -->
+    <title>Dr. Harshvardhaan Singh | Ankaayatra - Strategic Numerology & Astrology</title>
+    <meta name="description" content="Official platform of Dr. Harshvardhaan Singh. Industry-leading Numerology, Astrology, and Vastu consultancy. High-impact insights for global leaders.">
+    <meta property="og:title" content="Dr. Harshvardhaan Singh | Ankaayatra">
+    <meta property="og:description" content="Institutional Grade Astrology & Numerology. Precision-driven results for your life and business.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        solar: '#FAF9F6', /* Main Alabaster BG */
+                        gold: '#B8860B',  /* Deep Solar Gold */
+                        saffron: '#E67E22', /* Energy Accent */
+                        onyx: '#1A1A1A',   /* High-contrast Text */
+                        clay: '#E5E1D8'    /* Border/Grid color */
+                    },
+                    fontFamily: {
+                        heading: ['Marcellus', 'serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        widest: '0.05em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF9F6;
+            color: #1A1A1A;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* SVG Grain Overlay - Softened for Light Mode */
+        .grain {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .section-padding {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        @media (min-width: 1024px) {
+            .section-padding {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+        }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Swiss Grid Borders */
+        .swiss-grid {
+            border: 1px solid #E5E1D8;
+        }
+
+        /* Premium Float Interaction */
+        .premium-float {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .premium-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px -12px rgba(184, 134, 11, 0.2);
+        }
+
+        /* Hide scrollbars */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Glass Nav */
+        .glass-nav {
+            background: rgba(250, 249, 246, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(229, 225, 216, 0.5);
+        }
+
+        /* Success Story Card Backgrounds */
+        .story-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) brightness(0.4);
+            transition: filter 0.5s ease;
+        }
+        .story-card:hover .story-img {
+            filter: grayscale(30%) brightness(0.5);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="grain"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[110] glass-nav section-padding py-3 lg:py-4 flex justify-between items-center">
+        <div class="flex flex-col">
+            <span class="font-heading text-xl lg:text-2xl tracking-[0.2em] text-gold leading-none">ANKAAYATRA</span>
+            <span class="text-[8px] lg:text-[9px] uppercase tracking-[0.4em] text-onyx/60 font-bold mt-1">Dr. Harshvardhaan Singh</span>
+        </div>
+        <div class="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.2em] font-bold text-onyx/80">
+            <a href="#impact" class="hover:text-saffron transition-colors">Impact</a>
+            <a href="#stories" class="hover:text-saffron transition-colors">Stories</a>
+            <a href="#services" class="hover:text-saffron transition-colors">Practices</a>
+            <a href="#testimonials" class="hover:text-saffron transition-colors">Reviews</a>
+        </div>
+        <a href="https://wa.me/919650778531" class="bg-onyx text-solar text-[9px] lg:text-[10px] font-bold uppercase tracking-widest px-6 lg:px-8 py-3 hover:bg-gold transition-all shadow-xl shadow-onyx/10">
+            Direct Access
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center section-padding bg-solar overflow-hidden">
+        <!-- Sun Energy Geometry -->
+        <div class="absolute top-1/2 right-[-5%] -translate-y-1/2 w-[50%] h-full opacity-10 pointer-events-none hidden lg:block">
+            <svg viewBox="0 0 500 500" class="w-full h-full text-saffron">
+                <circle cx="250" cy="250" r="220" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="20 10" />
+                <circle cx="250" cy="250" r="150" fill="none" stroke="currentColor" stroke-width="1" />
+                <g class="animate-[spin_60s_linear_infinite]" style="transform-origin: center;">
+                    <path d="M250 20 L250 480 M20 250 L480 250" stroke="currentColor" stroke-width="0.5" />
+                    <path d="M87 87 L413 413 M87 413 L413 87" stroke="currentColor" stroke-width="0.5" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="relative z-10 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
+            <div class="inline-flex items-center gap-3 mb-6 lg:mb-10 reveal">
+                <span class="h-[1px] w-8 bg-gold"></span>
+                <h4 class="text-gold uppercase tracking-[0.5em] text-[10px] font-bold">Strategic Destiny Alignment</h4>
+            </div>
+            
+            <h1 class="font-heading text-5xl lg:text-[7.5rem] leading-[0.95] font-[300] text-onyx mb-8 lg:mb-10 reveal" style="transition-delay: 150ms;">
+                Decode Your <br>
+                <span class="text-saffron italic">Destiny.</span>
+            </h1>
+            
+            <p class="text-onyx/70 text-base lg:text-xl max-w-2xl font-[300] leading-relaxed mb-10 lg:mb-12 reveal" style="transition-delay: 300ms;">
+                Beyond mysticism lies a precise science. We navigate your personal and professional obstacles through institutional-grade Vedic analysis and numeric frequency alignment.
+            </p>
+            
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-6 reveal" style="transition-delay: 450ms;">
+                <button onclick="document.getElementById('command').scrollIntoView()" class="bg-gold text-white px-10 lg:px-12 py-4 lg:py-5 text-xs lg:text-sm font-bold uppercase tracking-widest shadow-2xl shadow-gold/30 hover:bg-saffron transition-all premium-float">
+                    Consult The Specialist
+                </button>
+                <a href="https://youtube.com/@Ankayatraa" target="_blank" class="border-2 border-clay px-8 lg:px-10 py-4 lg:py-5 text-xs lg:text-sm font-bold uppercase tracking-widest text-onyx flex items-center gap-3 hover:bg-clay/30 transition-all">
+                    <i data-lucide="youtube" class="w-4 h-4 fill-current text-red-600"></i> Watch Ankaayatra
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Impact Slide -->
+    <section id="impact" class="py-16 lg:py-24 section-padding bg-white border-y border-clay">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+            <div class="reveal">
+                <h2 class="text-6xl lg:text-7xl font-[300] font-heading text-gold mb-3">15k<span class="text-saffron">+</span></h2>
+                <h3 class="text-[11px] uppercase font-bold tracking-widest text-onyx mb-3">Lives Transformed</h3>
+                <p class="text-onyx/60 text-sm leading-relaxed font-[400]">Providing the strategic blueprint for absolute growth across global enterprises.</p>
+            </div>
+            <div class="reveal" style="transition-delay: 200ms;">
+                <h2 class="text-6xl lg:text-7xl font-[300] font-heading text-gold mb-3">4.9<span class="text-saffron">★</span></h2>
+                <h3 class="text-[11px] uppercase font-bold tracking-widest text-onyx mb-3">Google Rating</h3>
+                <p class="text-onyx/60 text-sm leading-relaxed font-[400]">A heritage of surgical accuracy in birth chart readings and identity corrections.</p>
+            </div>
+            <div class="reveal" style="transition-delay: 400ms;">
+                <h2 class="text-6xl lg:text-7xl font-[300] font-heading text-gold mb-3">20<span class="text-saffron">y</span></h2>
+                <h3 class="text-[11px] uppercase font-bold tracking-widest text-onyx mb-3">Proven Expertise</h3>
+                <p class="text-onyx/60 text-sm leading-relaxed font-[400]">Mastery in structural Vastu and numeric science calibrated for the digital age.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="stories" class="py-20 lg:py-24 section-padding bg-solar">
+        <div class="flex justify-between items-end mb-12 lg:mb-16 gap-8">
+            <div class="reveal">
+                <h4 class="text-saffron uppercase tracking-[0.5em] text-[10px] font-bold mb-3 italic">Evidence of Alignment</h4>
+                <h2 class="font-heading text-4xl lg:text-6xl font-[300] text-onyx leading-tight">Success <span class="text-gold italic">Stories.</span></h2>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="scrollCarousel(-1)" class="w-12 h-12 border border-clay flex items-center justify-center hover:bg-gold hover:text-white transition-all"><i data-lucide="arrow-left" class="w-5 h-5"></i></button>
+                <button onclick="scrollCarousel(1)" class="w-12 h-12 border border-clay flex items-center justify-center hover:bg-gold hover:text-white transition-all"><i data-lucide="arrow-right" class="w-5 h-5"></i></button>
+            </div>
+        </div>
+        
+        <div id="carousel" class="flex gap-8 lg:gap-10 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-8">
+            <!-- Story 1: Corporate Vastu -->
+            <div class="story-card min-w-[300px] md:min-w-[420px] aspect-[4/5] relative overflow-hidden flex flex-col justify-end p-10 premium-float snap-start reveal">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&h=800&auto=format&fit=crop" class="story-img" alt="Office Vastu">
+                <div class="relative z-10 text-white">
+                    <div class="mb-4 text-gold font-bold text-[9px] tracking-widest uppercase">Institutional Vastu</div>
+                    <h3 class="font-heading text-2xl lg:text-3xl mb-3 leading-tight">Corporate Energy Revival</h3>
+                    <p class="text-white/70 text-xs lg:text-sm leading-relaxed mb-6">Neutralized directional blockages in a Tech HQ to reset organizational morale and flow.</p>
+                    <div class="pt-5 border-t border-white/20 flex items-center gap-4">
+                        <span class="text-gold font-bold text-base">Result:</span>
+                        <span class="text-white font-bold text-[10px] tracking-wide uppercase">40% Efficiency Upsurge</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Story 2: Legacy Match -->
+            <div class="story-card min-w-[300px] md:min-w-[420px] aspect-[4/5] relative overflow-hidden flex flex-col justify-end p-10 premium-float snap-start reveal" style="transition-delay: 150ms;">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&h=800&auto=format&fit=crop" class="story-img" alt="Legacy Alignment">
+                <div class="relative z-10 text-white">
+                    <div class="mb-4 text-gold font-bold text-[9px] tracking-widest uppercase">Legacy Alignment</div>
+                    <h3 class="font-heading text-2xl lg:text-3xl mb-3 leading-tight">Strategic Merger Support</h3>
+                    <p class="text-white/70 text-xs lg:text-sm leading-relaxed mb-6">Compatibility audit for industrial families, ensuring long-term synergy and abundance.</p>
+                    <div class="pt-5 border-t border-white/20 flex items-center gap-4">
+                        <span class="text-gold font-bold text-base">Result:</span>
+                        <span class="text-white font-bold text-[10px] tracking-wide uppercase">Unified Global Expansion</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Story 3: Capital Growth -->
+            <div class="story-card min-w-[300px] md:min-w-[420px] aspect-[4/5] relative overflow-hidden flex flex-col justify-end p-10 premium-float snap-start reveal" style="transition-delay: 300ms;">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=600&h=800&auto=format&fit=crop" class="story-img" alt="Capital Numerology">
+                <div class="relative z-10 text-white">
+                    <div class="mb-4 text-gold font-bold text-[9px] tracking-widest uppercase">Capital Numerology</div>
+                    <h3 class="font-heading text-2xl lg:text-3xl mb-3 leading-tight">Abundance Recalibration</h3>
+                    <p class="text-white/70 text-xs lg:text-sm leading-relaxed mb-6">Identity refinement for a stagnated investor to unlock capital flow and wealth cycles.</p>
+                    <div class="pt-5 border-t border-white/20 flex items-center gap-4">
+                        <span class="text-gold font-bold text-base">Result:</span>
+                        <span class="text-white font-bold text-[10px] tracking-wide uppercase">3x Portfolio Acceleration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Mechanism: Practices -->
+    <section id="services" class="py-20 lg:py-24 section-padding bg-white">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-16 lg:mb-20 gap-8">
+            <div class="max-w-xl reveal">
+                <h4 class="text-saffron uppercase tracking-[0.5em] text-[10px] font-bold mb-3">The Methodology</h4>
+                <h2 class="font-heading text-4xl lg:text-6xl font-[300] leading-tight text-onyx">Scientific <br><span class="text-gold italic">Mysticism.</span></h2>
+            </div>
+            <p class="text-onyx/60 max-w-sm text-sm font-medium leading-relaxed reveal" style="transition-delay: 200ms;">
+                Ancient vibrations translated into modern corporate strategy. No conjecture—only verifiable cosmic alignment.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 swiss-grid">
+            <div class="p-10 lg:p-12 border-b md:border-r border-clay group hover:bg-solar transition-colors reveal">
+                <div class="w-12 h-12 bg-gold/10 flex items-center justify-center mb-8">
+                    <i data-lucide="smartphone" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h3 class="text-[11px] uppercase font-bold tracking-widest text-onyx mb-3">Mobile Numerology</h3>
+                <p class="text-onyx/60 text-sm font-[400] leading-relaxed">Optimization of your digital frequency for sustained commercial and personal victory.</p>
+            </div>
+            <div class="p-10 lg:p-12 border-b lg:border-r border-clay group hover:bg-solar transition-colors reveal" style="transition-delay: 100ms;">
+                <div class="w-12 h-12 bg-saffron/10 flex items-center justify-center mb-8">
+                    <i data-lucide="home" class="w-6 h-6 text-saffron"></i>
+                </div>
+                <h3 class="text-[11px] uppercase font-bold tracking-widest text-onyx mb-3">Vastu Remade</h3>
+                <p class="text-onyx/60 text-sm font-[400] leading-relaxed">Structural harmony for high-performance residences and institutional offices.</p>
+            </div>
+            <div class="p-10 lg:p-12 border-b md:border-r lg:border-r-0 border-clay group hover:bg-solar transition-colors reveal" style="transition-delay: 200ms;">
+                <div class="w-12 h-12 bg-gold/10 flex items-center justify-center mb-8">
+                    <i data-lucide="gem" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h3 class="text-[11px] uppercase font-bold tracking-widest text-onyx mb-3">Gemmology</h3>
+                <p class="text-onyx/60 text-sm font-[400] leading-relaxed">Elemental selection predicated on precision Mulank and Bhagyank data sets.</p>
+            </div>
+            <div class="p-10 lg:p-12 border-b lg:border-b-0 lg:border-r border-clay group hover:bg-solar transition-colors reveal" style="transition-delay: 300ms;">
+                <div class="w-12 h-12 bg-saffron/10 flex items-center justify-center mb-8">
+                    <i data-lucide="heart" class="w-6 h-6 text-saffron"></i>
+                </div>
+                <h3 class="text-[11px] uppercase font-bold tracking-widest text-onyx mb-3">Marriage Legacy</h3>
+                <p class="text-onyx/60 text-sm font-[400] leading-relaxed">Compatibility audits to secure emotional synchronization and prosperity.</p>
+            </div>
+            <div class="p-10 lg:p-12 border-b md:border-b-0 md:border-r border-clay group hover:bg-solar transition-colors reveal" style="transition-delay: 400ms;">
+                <div class="w-12 h-12 bg-gold/10 flex items-center justify-center mb-8">
+                    <i data-lucide="pen-tool" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h3 class="text-[11px] uppercase font-bold tracking-widest text-onyx mb-3">Name Correction</h3>
+                <p class="text-onyx/60 text-sm font-[400] leading-relaxed">Refining identity phonetics to align with peak career achievements and growth.</p>
+            </div>
+            <div class="p-10 lg:p-12 group hover:bg-solar transition-colors reveal" style="transition-delay: 500ms;">
+                <div class="w-12 h-12 bg-saffron/10 flex items-center justify-center mb-8">
+                    <i data-lucide="scroll" class="w-6 h-6 text-saffron"></i>
+                </div>
+                <h3 class="text-[11px] uppercase font-bold tracking-widest text-onyx mb-3">Kundali Reading</h3>
+                <p class="text-onyx/60 text-sm font-[400] leading-relaxed">Lifecycle mapping via rigorous analysis of traditional Vedic birth charts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 lg:py-24 section-padding bg-solar">
+        <div class="max-w-2xl mb-16 reveal">
+            <h4 class="text-gold uppercase tracking-[0.5em] text-[10px] font-bold mb-4 italic">Institutional Validation</h4>
+            <h2 class="font-heading text-4xl lg:text-6xl font-[300] text-onyx leading-tight">Elite <span class="italic text-saffron">Perspectives.</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 lg:p-10 bg-white border border-clay reveal">
+                <div class="flex gap-1 text-saffron mb-6">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-onyx text-base lg:text-lg font-[300] leading-relaxed italic mb-8">"Dr. Singh's Vastu corrections reset our entire office energy. Within months, we saw a noticeable shift in productivity and closures."</p>
+                <div class="flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&h=100&auto=format&fit=crop" class="w-10 h-10 lg:w-12 lg:h-12 rounded-full grayscale" alt="Client">
+                    <div>
+                        <h4 class="font-bold text-[10px] lg:text-xs uppercase tracking-widest text-onyx">Rajesh Khanna</h4>
+                        <p class="text-[8px] text-onyx/40 font-bold uppercase mt-1">CEO, Khanna Global</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8 lg:p-10 bg-white border border-clay reveal" style="transition-delay: 150ms;">
+                <div class="flex gap-1 text-saffron mb-6">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-onyx text-base lg:text-lg font-[300] leading-relaxed italic mb-8">"The name analysis was surgical. It provided the missing piece in my professional identity journey. Truly transformative."</p>
+                <div class="flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&h=100&auto=format&fit=crop" class="w-10 h-10 lg:w-12 lg:h-12 rounded-full grayscale" alt="Client">
+                    <div>
+                        <h4 class="font-bold text-[10px] lg:text-xs uppercase tracking-widest text-onyx">Sneha Kapoor</h4>
+                        <p class="text-[8px] text-onyx/40 font-bold uppercase mt-1">Founder, Identity Lab</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8 lg:p-10 bg-white border border-clay reveal" style="transition-delay: 300ms;">
+                <div class="flex gap-1 text-saffron mb-6">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-onyx text-base lg:text-lg font-[300] leading-relaxed italic mb-8">"Ankaayatra's approach is institutional. No fluff, just pure data-driven cosmic insights that yield actual results."</p>
+                <div class="flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&h=100&auto=format&fit=crop" class="w-10 h-10 lg:w-12 lg:h-12 rounded-full grayscale" alt="Client">
+                    <div>
+                        <h4 class="font-bold text-[10px] lg:text-xs uppercase tracking-widest text-onyx">Vikram Aditya</h4>
+                        <p class="text-[8px] text-onyx/40 font-bold uppercase mt-1">Tech Investor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Command Center -->
+    <section id="command" class="section-padding py-20 lg:py-24 bg-white border-t border-clay">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div class="reveal">
+                <h4 class="text-saffron uppercase tracking-[0.5em] text-[10px] font-bold mb-6">Direct Engagement</h4>
+                <h2 class="font-heading text-4xl lg:text-7xl font-[300] leading-tight text-onyx mb-12">Consultation <br>Desk.</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+                    <div class="p-8 border border-clay/50 bg-solar flex gap-6 items-center">
+                        <i data-lucide="map-pin" class="w-8 h-8 text-gold shrink-0"></i>
+                        <div>
+                            <h3 class="text-[10px] uppercase font-bold tracking-widest text-gold mb-1">Headquarters</h3>
+                            <p class="text-onyx text-lg font-[300]">Gurugram, NCR, India</p>
+                        </div>
+                    </div>
+                    <div class="p-8 border border-clay/50 bg-solar flex gap-6 items-center">
+                        <i data-lucide="phone-call" class="w-8 h-8 text-saffron shrink-0"></i>
+                        <div>
+                            <h3 class="text-[10px] uppercase font-bold tracking-widest text-gold mb-1">Priority Line</h3>
+                            <p class="text-onyx text-lg font-[300]">+91 9650778531</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-solar p-8 lg:p-12 border-2 border-clay reveal shadow-2xl shadow-onyx/5" style="transition-delay: 200ms;">
+                <form id="inquiryForm" class="space-y-8">
+                    <div class="space-y-3">
+                        <label class="text-[9px] uppercase font-bold tracking-widest text-onyx/40">Identity</label>
+                        <input type="text" id="name" required class="w-full bg-transparent border-b border-clay py-3 focus:border-gold outline-none transition-colors text-lg text-onyx" placeholder="Full Name">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-3">
+                            <label class="text-[9px] uppercase font-bold tracking-widest text-onyx/40">Objective</label>
+                            <select id="service" class="w-full bg-transparent border-b border-clay py-3 focus:border-gold outline-none text-onyx text-base">
+                                <option>Institutional Vastu</option>
+                                <option>Personal Numerology</option>
+                                <option>Compatibility Analysis</option>
+                                <option>Capital Recalibration</option>
+                            </select>
+                        </div>
+                        <div class="space-y-3">
+                            <label class="text-[9px] uppercase font-bold tracking-widest text-onyx/40">Tier</label>
+                            <select id="tier" class="w-full bg-transparent border-b border-clay py-3 focus:border-gold outline-none text-onyx text-base">
+                                <option>Priority Access (₹4999)</option>
+                                <option>Institutional Project</option>
+                                <option>Strategic Audit</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <label class="text-[9px] uppercase font-bold tracking-widest text-onyx/40">Brief</label>
+                        <textarea id="message" rows="2" class="w-full bg-transparent border-b border-clay py-3 focus:border-gold outline-none text-lg text-onyx" placeholder="Current obstruction..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-onyx text-white py-5 text-xs font-bold uppercase tracking-[0.2em] shadow-2xl hover:bg-gold transition-all premium-float">
+                        Secure Initiation
+                    </button>
+                    <p class="text-[8px] text-center text-onyx/30 uppercase tracking-[0.3em] font-bold">Encrypted Redirect to WhatsApp</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-padding py-16 lg:py-20 bg-solar border-t border-clay">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+            <div class="max-w-md">
+                <span class="font-heading text-4xl block mb-6 text-gold">Ankaayatra.</span>
+                <p class="text-onyx/50 text-xs lg:text-sm font-[400] leading-relaxed mb-8">Architecting success by aligning numeric frequency with cosmic rhythm. High-impact Vedic consulting for the modern elite.</p>
+                <div class="flex gap-6">
+                    <a href="https://www.youtube.com/@Ankayatraa" target="_blank" class="opacity-40 hover:opacity-100 hover:text-gold transition-all"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                    <a href="https://instagram.com/drharshvardhaansingh" target="_blank" class="opacity-40 hover:opacity-100 hover:text-gold transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="https://facebook.com/share/15BMy3Q9Nz" target="_blank" class="opacity-40 hover:opacity-100 hover:text-gold transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="https://x.com/drharshvsingh" target="_blank" class="opacity-40 hover:opacity-100 hover:text-gold transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="https://linkedin.com/in/dr-harshvardhaan-singh-9b45b216" target="_blank" class="opacity-40 hover:opacity-100 hover:text-gold transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            <div class="text-[9px] uppercase tracking-[0.4em] font-bold text-onyx/40 md:text-right">
+                © 2024 Dr. Harshvardhaan Singh. <br class="hidden md:block"> Strategic Legacy Preservation.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Reveal Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Carousel Scroll
+        function scrollCarousel(dir) {
+            const container = document.getElementById('carousel');
+            container.scrollBy({ left: dir * 420, behavior: 'smooth' });
+        }
+
+        // WhatsApp Form Logic
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            const tier = document.getElementById('tier').value;
+            const msg = document.getElementById('message').value;
+            
+            const waBody = encodeURIComponent(
+                `⚡ *NEW STRATEGIC INQUIRY*\n\n` +
+                `*Client:* ${name}\n` +
+                `*Focus:* ${service}\n` +
+                `*Tier:* ${tier}\n` +
+                `*Message:* ${msg}\n\n` +
+                `_Logged via Official Portal_`
+            );
+            window.open(`https://wa.me/919650778531?text=${waBody}`, '_blank');
+        });
+    </script>
+</body>
+</html>
